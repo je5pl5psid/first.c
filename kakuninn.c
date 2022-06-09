@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    printf("Hello World\nkonamikann");
-
+    printf("Hello\t World\nkonami\tkann");
+    
     return 0;
 }
