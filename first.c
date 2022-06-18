@@ -1,13 +1,26 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main(void)
-{
-    int score;
-    do
+int main(void){
+    int a , b , c , kazu , i;
+    a = 0;
+    b = 1;
+    printf("put inn suuti\n");
+    scanf("%d",&kazu);
+    kazu = kazu - 1;
+    for(i = 1 ;  i <= kazu; i++){
+        c = b + a;
+        a = b;
+        b = c;
+    }
+     printf("%05d‰ñ–Ú %d\n",i,b);
+return 0;
+    for(int i = 1;i <= 9; i++)
     {
-        /* code */
-        printf("“_”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢F");
-        scanf("%d",&score);
-    } while (score < 0 || score > 100/* condition */);
- return 0;   
+        for(int j = 1; j <= 9; j++)
+        {
+            printf("%02d ",i * j);
+        }
+        printf("\n");
+    }
+    return 0;
 }
