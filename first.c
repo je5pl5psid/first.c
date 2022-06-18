@@ -12,7 +12,7 @@ int main(void){
         a = b;
         b = c;
     }
-     printf("%05d‰ñ–Ú %d\n",i,b);
+     printf("%05dtimes %d\n",i,b);
 return 0;
     for(int i = 1;i <= 9; i++)
     {
