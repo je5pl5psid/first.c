@@ -2,13 +2,12 @@
 
 int main(void)
 {
-    for(int i = 1;i <= 9; i++)
+    int score;
+    do
     {
-        for(int j = 1; j <= 9; j++)
-        {
-            printf("%02d ",i * j);
-        }
-        printf("\n");
-    }
-    return 0;
+        /* code */
+        printf("“_”‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢F");
+        scanf("%d",&score);
+    } while (score < 0 || score > 100/* condition */);
+ return 0;   
 }
