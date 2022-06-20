@@ -1,15 +1,23 @@
 #include<stdio.h>
 
 int main(void){
-    int a , b , c , kazu , i;
-    a = 0;
-    b = 1;
-    printf("put inn suuti\n");
-    scanf("%d",&kazu);
-    for(i = 1 ;  i < kazu; i++){
-        c = b + a;
-        a = b;
-        b = c;
+    int kazu, a;
+    
+    for( ; ; ){
+        printf("put in number:");
+        scanf("%d\n",kazu);
+        if(kazu >= 0 && kazu <= 2147483647 )break;
     }
-     printf("%05dtimes %d\n",i,b);
+    for(;;){
+        a = 2;
+        if(kazu % a != 0)break;
+        kazu = kazu / a;
+        printf("*%d ",a);
+    }
+    for(;;){
+        a = 3;
+        if(kazu % a != 0)break;
+        kazu = kazu / a;
+    }
+    return 0;
 }
