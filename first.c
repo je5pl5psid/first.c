@@ -1,23 +1,38 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(void){
-    int kazu, a;
-    
-    for( ; ; ){
-        printf("put in number:");
-        scanf("%d\n",kazu);
-        if(kazu >= 0 && kazu <= 2147483647 )break;
+int hannbetu(int a); /* プロトタイプ宣言 */
+
+int main(void)
+{
+    int a, b ;
+    printf("西暦年を入力してください。");
+    scanf("&d",&a);
+    printf("%d\n",a);
+    hannbetu(a);
+    return 0;
+}
+
+int hannbetu(int a)
+{
+    int num, ei ;
+    printf("%d\n",a);
+    ei = a & 4;
+    printf("%d\n",ei);
+    if
+    (ei == 0){
+        printf("sumer");
     }
-    for(;;){
-        a = 2;
-        if(kazu % a != 0)break;
-        kazu = kazu / a;
-        printf("*%d ",a);
+    else if
+    (ei == 2){
+        printf("winter");
     }
-    for(;;){
-        a = 3;
-        if(kazu % a != 0)break;
-        kazu = kazu / a;
+    else if 
+    (ei == 1){
+        printf("nasi");
+    }
+    else if
+    (ei == 3){
+        printf("nasi");
     }
     return 0;
 }
