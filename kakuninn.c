@@ -1,35 +1,25 @@
+#include <memory.h>
 #include <stdio.h>
 
 int main(void)
 {
-    int ei;
-    ei = 0;
-    if
-    (ei == 0){
-        printf("sumer");
+    int array1[] = { 42, 79, 13, 19, 41 , 22, 99};
+    int array2[] = { 1, 2, 3, 4, 5 , 6 , 7};
+    int i;
+    
+    for (i = 0; i < sizeof(array1) + 1 / sizeof(array1[0]); i++) {
+        printf("array1[%d] = %d\n", i, array1[i]);
     }
-    else if
-    (ei == 2){
-        printf("winter");
+
+    for (i = 0; i < sizeof(array2) / sizeof(array2[0]); i++) {
+        printf("array2[%d] = %d\n", i, array2[i]);
     }
-    else if 
-    (ei == 1){
-        printf("nasi");
+
+    memcpy(array2, array1, sizeof(array1)); /* array1 の全要素を array2 にコピー */
+
+    for (i = 0; i < sizeof(array2) / sizeof(array2[0]); i++) {
+        printf("array2[%d] = %d\n", i, array2[i]);
     }
-    else if
-    (ei == 3){
-        printf("nasi");
-    }
+
     return 0;
-    /*
-    int money,iti,sann,go,hati;
-    printf("put in money");
-    scanf("%d",&money);
-    iti = (int)(money * 0.9);
-    sann = (int)(money * 0.7);
-    go = (int)(money * 0.5);
-    hati = (int)(money * 0.2);
-    printf("10%waribiki...%dyen\n30%waribiki...%dyen\n50%waribiki...%dyen\n80%waribiki...%dyen\n",iti,sann,go,hati);
-    return 0;
-    */
 }
