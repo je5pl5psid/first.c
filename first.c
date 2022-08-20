@@ -2,6 +2,7 @@
 
 int main(void)
 {
+    printf("check");
     int i,j,moji[256];
     for(i = 1 ; ; i ++){ 
         printf("suuji wo nyuuryoku site kudasai:");
