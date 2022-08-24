@@ -19,11 +19,8 @@ int main(void){
     moji[i]=j;
     if (j == -1) break ;
     }
-    printf("owari\n");
-    for (l = 0; l < 10; l++){
-        printf("moji[%d]bannmeha: %d\n", l+1, moji[l]);
-    }
 keisann(moji,&min,&max);
+printf("saisyou[%d] saidai[%d]",min,max);
 }
 
 
@@ -31,28 +28,12 @@ keisann(moji,&min,&max);
 
 
 int keisann(int data[10],int *min,int *max){
-    int i,j,k,l;
-    for(i = 100;i >= 0; i--){
-        for( j = 0;j <= 9;j++){
-            if(data[j]==i){
-                printf("saidaiti :%d\n",data[j]);
-                break;
-            }
-        }
-        if(data[j]==i){
-            break;
-        }
+    int i;
+    *min = 100;
+    *max = 0;
+    for(i = 0;i <= 9;i ++){
+        if(data[i] == -1)break;
+        if(data[i] < *min) *min = data[i];
+        if(data[i] > *max) *max = data[i];
     }
-    for(k = 0;k <= 100;k++){
-        for(l = 0;l <= 9;l++){
-            if(data[l]==k){
-                printf("saisyouti :%d\n",data[l]);
-                break;
-            }
-        }
-        if(data[l]==k){
-            break;
-        }
-    }
-    return 0;
 }
