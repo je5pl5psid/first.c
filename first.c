@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//suuti nyuuryoku de "25","26","27"atari de sakaime no nanika ga arimasu.
+
 int keisann(int data[10],int *min,int *max);
 
 int main(void){
@@ -7,9 +9,8 @@ int main(void){
     int min;
     int max;
     for(i = 0 ; i < 10; i ++){ 
-        printf("suuji wo nyuuryoku site kudasai:");
+        printf("[%d]suuji wo nyuuryoku site kudasai:",i+1);
         scanf("%d",&j);
-        printf("%d\n",j);
         for(;;){
             if (j >= -1 && j <= 100) break;
             printf("suujiwonyuuryokusitekudasai:");
@@ -17,13 +18,10 @@ int main(void){
         }
     moji[i]=j;
     if (j == -1) break ;
-    for (k = 0; k < 10; k++){
-        printf("moji[%d] = %d\n", k, moji[k]);
-        }
     }
     printf("owari\n");
     for (l = 0; l < 10; l++){
-        printf("moji[%d]bannmeha: %d\n", l, moji[l]);
+        printf("moji[%d]bannmeha: %d\n", l+1, moji[l]);
     }
 keisann(moji,&min,&max);
 }
@@ -38,7 +36,6 @@ int keisann(int data[10],int *min,int *max){
         for( j = 0;j <= 9;j++){
             if(data[j]==i){
                 printf("saidaiti :%d\n",data[j]);
-                
                 break;
             }
         }
@@ -49,8 +46,7 @@ int keisann(int data[10],int *min,int *max){
     for(k = 0;k <= 100;k++){
         for(l = 0;l <= 9;l++){
             if(data[l]==k){
-                printf("saisyouti :%d\n",data[k]);
-                
+                printf("saisyouti :%d\n",data[l]);
                 break;
             }
         }
