@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-int keisann(int);
+int keisann(int data[10],int *min,int *max);
 
 int main(void){
-    int i,j,k,l,moji[10] ={-2,-2,-2,-2,-2,-2,-2,-2,-2,-2};
-    int min,max;
+    int i,j,k,l,kekka,moji[10] ={-2,-2,-2,-2,-2,-2,-2,-2,-2,-2};
+    int min;
+    int max;
     for(i = 0 ; i < 10; i ++){ 
         printf("suuji wo nyuuryoku site kudasai:");
         scanf("%d",&j);
@@ -26,26 +27,36 @@ int main(void){
         printf("moji[%d]bannmeha: %d\n", k, moji[l]);
         k = k + 1;
     }
-    
-    max=keisann(moji[]);
-    return 0;
+keisann(moji,&min,&max);
 }
 
-int keisann(int moji[]){
-    int i,j,k,l,m,n,array[] = {-2,-2,-2,-2,-2};
-    for(i = 0 ; i < 5 ; i ++){
-        j = i * 2;
-        k = j + 1;
-        moji[j] = l;
-        moji[k] = m;
-        if(l >= m){
-            &array[i] = &moji[j];
+
+
+
+
+int keisann(int data[10],int *min,int *max){
+    int i,j,k,l;
+    for(i = 100;i >= 0; i--){
+        for( j = 9;i >= 0;i--){
+            if(data[j]==i){
+                printf("saidaiti :%d\n",data[j]);
+                break;
+            }
         }
-        else {
-            &array[i] = &moji[k];
+        if(data[j]==i){
+            break;
         }
     }
-    for(i = 0 ; i < 5; i ++){
-        printf("array{%d} :%d",i,array[i]);
+    for(k = 0;k <= 100;k++){
+        for(l = 0;l <= 9;l++){
+            if(data[k]==l){
+                printf("saisyouti :%d\n",data[k]);
+                break;
+            }
+        }
+        if(data[k]==l){
+            break;
+        }
     }
+    return 0;
 }
