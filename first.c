@@ -1,41 +1,40 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct 
+typedef struct
 {
-    char name[64];
+    char name[256];
     int age;
-    char gender[1];//M = man;F = women;also LGBT...+
-} person;
+    char gender[2];  
+} person ;
 
-void person_print(person data)
-void person_s(person *data)
+void person_scan(person *data);
+void person_print(person *data);
 
-int main(void){
+int main(void)
+{
     person data[3];
-    int i;
-    for(i = 0; i < 3; i++)
-    {
-    person_s(&data[i]);
-    person_print(data[i]);
-    }
+    person_scan(data);//yobidasi
+//    strcpy(data[1].name,"wawawa");
+//    data[1].age = 35;
+//    strcpy(data[1].gender,"M");
+    person_print(data);//yobidasi  //配列名-> ポインタ
     return 0;
 }
 
-void person_print(person data){
-    printf("[name]:%s\n",data.name);
-    printf("[age]:%d\n",data.age);
-    printf("[gender]:%s\n",data.gender);
-
+void person_scan(person *data)
+{
+    printf("名前を入力してください");
+    scanf("%s",&data[1].name);
+    printf("年齢を入力してください");
+    scanf("%d",&data[1].age);
+    printf("性別M=man,F=woman");
+    scanf("%s",&data[1].gender);
 }
 
-void person_s(person *data){
-    printf("nennreiwonyuuryokusitekudasai:\n");
-    scanf("%d",&data->age);
-    printf("namaewonyuuryokusitekudasai:\n");
-    scanf("%s",data->name);
-    printf("M=man,F=woman,another:\n");
-    scanf("%s",data->gender);
-    printf("\n");
-    return ;
+void person_print(person *data)
+{
+    printf("name  [%s]\n",data[1].name);
+    printf("age   [%d]\n",data[1].age);
+    printf("gender[%s]\n",data[1].gender);
 }
