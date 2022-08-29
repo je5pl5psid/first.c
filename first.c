@@ -21,7 +21,7 @@ int main(void)
     }
     for(l = 0;l < 3;l++)
     {
-    person_print(data,l);//yobidasi  //配列名-> ポインタ
+        person_print(data,l);
     }
     return 0;
 }
@@ -39,6 +39,6 @@ void person_scan(person *data,int j)
 void person_print(person *data,int k)
 {
     printf("name[%d]%s\n",k,data[k].name);
-    printf("age   %d\n",data[k].age);
-    printf("gender%s\n",data[k].gender);
+    printf("age    %d\n",data[k].age);
+    printf("gender %s\n",data[k].gender);
 }
