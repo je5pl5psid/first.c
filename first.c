@@ -1,12 +1,24 @@
-#include <stdio.h>
+#include<stdio.h>
+
+#define stacksize 100
+#define success 1
+#define failure 0
+
+typedef int data_t;
+
+data_t stack_data[stacksize];
+int stack_num;
+
+int push(data_t push_data);
+int pop(data_t *pop_data);
+void stackprint();
 
 int main(void)
 {
-    int milk ,water,money ,change ,kane;
-    milk = 138;
-    water = 198;
-    money = (milk*2 + water)*1.05;
-    kane = 1000;
-    printf("%d",kane - money);
-    return 0;
+    int i,p;
+    stack_num = 0;    
 }
+
+
+
+
